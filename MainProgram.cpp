@@ -168,12 +168,13 @@ IntArray& IntArray::operator=(const IntArray& other) {
     //         NOTE: Do NOT call Tracker here (object already exists)
     if(this!=&other){
         delete[] data;
-    }
-    capacity=other.capacity;
+        capacity=other.capacity;
     count=other.count;
     data=new int[capacity];
     for(int i=0;i<count;i++){
         data[i]=other.data[i];
+    }
+    
     }
     return *this;
 }
